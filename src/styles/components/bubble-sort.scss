@@ -1,0 +1,16 @@
+.bubble-sort {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 0 0 10%;
+  }
+
+  &__box--active {
+    background-color: green;
+  }
+
+  &__box--disabled {
+    background-color: grey;
+  }
+}

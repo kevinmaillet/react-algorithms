@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+$columns: 12;
+
+[class^='col-'] {
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      flex: 0 0 (100% / ($columns / $i));
+    }
+
+    .col-offset-#{$i} {
+      margin-left: 100% / ($columns / $i);
+    }
+  }
+}
